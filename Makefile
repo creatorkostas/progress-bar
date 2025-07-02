@@ -7,6 +7,10 @@ GO_FILES := $(shell find . -type f -not -path './vendor/*' -name '*.go')
 .PHONY test: go-fmt go-vet go-test
 .PHONY build: clean
 .PHONY install: build
+.PHONY run: run
+
+run:
+	go run main.go
 
 go-test:
 	@echo "Running go test"
